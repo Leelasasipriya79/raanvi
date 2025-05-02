@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raanvi - Your Premium E-Commerce Platform</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <ul class="left-links top-links">
+                <li><a href="#business-section">Business Centre</a></li>
+                <li><a href="#about-section">About Us</a></li>
+            </ul>
+            <ul class="right-links top-links">
+                
+                <li><a href="#help-center">Help Centre <span class="dropdown-icon"></span></a></li>
+                <button data-signin>Sign In</button>
+               
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Main Header -->
+    <header>
+        <div class="header-container">
+           
+            <div class="logo">
+                <img src="assets\images\logo.jpg" alt="Raanvi Logo" class="logo-image">
+                <!-- If you want to keep the text as fallback -->
+                
+            </div>    
+            <button class="mobile-menu-btn">☰</button>  
+            
+            <script>
+           
+                document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    });
+  }
+});
+
+ </script>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#banner">Home</a></li>
+                    
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#legal-documents">Legal</a></li>
+                    
+                   
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" id="productSearch" placeholder="Search products...">
+                        <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const searchInput = document.getElementById('productSearch');
+                    const searchButton = document.getElementById('searchButton');
+                    
+                    function handleSearch() {
+                        const searchTerm = searchInput.value.trim().toLowerCase();
+                        if (searchTerm) {
+                            // Scroll to products section
+                            document.getElementById('products').scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                            
+                            // Optional: Highlight matching products (keeps existing functionality)
+                            // You can add this if you want to filter products
+                        }
+                    }
+                    
+                    // Add event listeners
+                    searchButton.addEventListener('click', handleSearch);
+                    searchInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter') {
+                            handleSearch();
+                        }
+                    });
+                });
+                </script>
+                
+                <!-- Mobile Menu Button (Must exist!) -->
+           
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Carousel -->
+    <section class="banner-carousel">
+        <div class="banner-container" id="bannerContainer">
+            <div class="banner-slide">
+                <img src="assets\images\banner.jpg" alt="Raanvi Premium Collection">
+            </div>
+            <div class="banner-slide">
+                <img src="assets\images\banner2.jpg" alt="raanvi-care">
+            </div>
+            <div class="banner-slide">
+                <img src="assets\images\banner3.jpg" alt="raanvi-shakthi">
+            </div>
+            
+        </div>
+        
+        <div class="banner-nav">
+            <button id="prevBanner"><i class="fas fa-chevron-left"></i></button>
+            <button id="nextBanner"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="banner-dots" id="bannerDots">
+            <div class="banner-dot active"></div>
+            <div class="banner-dot"></div>
+            <div class="banner-dot"></div>
+           
+        </div>
+    </section>
+    <!-- About Us Section -->
+<!-- Top Banner -->
+
+
+<!-- This is Raanvi Section -->
+
+<section id="about-section" class="about-section">
+    <!-- This is Raanvi Section -->
+    <section class="company-intro">
+        <div class="container">
+            <h2>This is Raanvi</h2>
+            <div class="intro-content">
+                <p>As a leading nutraceutical company in India, Raanvi is committed to bridging ancient Ayurvedic wisdom with modern scientific research to create holistic wellness solutions. Our mission is to empower individuals to take charge of their health through premium-quality, scientifically-validated natural products.</p>
+                
+                <p>Since our founding in 2023, Raanvi has grown to become a trusted wellness partner for thousands of Indians. Our network of wellness ambassadors and dedicated employees work tirelessly to promote our vision of a healthier India through education and access to quality supplements.</p>
+                
+                <p>Raanvi offers a carefully curated range of products targeting various health concerns - from immunity support to joint health, digestive wellness to metabolic balance. Each formulation is developed by our team of Ayurvedic doctors and modern nutritionists to ensure safety, efficacy and scientific validation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Raanvi was founded by a team of Ayurvedic practitioners and nutrition scientists who recognized the need for authentic, research-backed herbal formulations in the modern wellness market. What began as a small initiative to make traditional remedies more accessible has grown into a respected nutraceutical brand.</p>
+                    
+                    <p>Headquartered in [Your City], India, Raanvi operates with a pan-India presence through our network of wellness consultants. Our state-of-the-art manufacturing facility in [Location] is GMP-certified and follows stringent quality control measures at every production stage.</p>
+                    
+                    <p>In just a few years, Raanvi has developed over 50 specialized formulations in our product portfolio, with several patented Ayurvedic compounds. We source ingredients directly from certified organic farms across India to ensure purity and potency.</p>
+                </div>
+                <div class="story-image">
+                    <img src="assets\images\about1.png" alt="Raanvi Founders" class="story-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Approach Section -->
+    <section class="our-approach">
+        <div class="container">
+            <h2>Our Approach to Wellness</h2>
+            <p class="subheading">Holistic Health Through Daily Nutrition</p>
+            
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <img src="assets\images\about2.png" alt="Ayurveda" class="approach-img">
+                    <h3>Rooted in Ayurveda</h3>
+                    <p>Our formulations are based on centuries-old Ayurvedic principles, validated by modern research</p>
+                </div>
+                
+                <div class="approach-card">
+                    <img src="assets\images\about3.png" alt="Science" class="approach-img">
+                    <h3>Backed by Science</h3>
+                    <p>Every product undergoes rigorous clinical testing for safety and efficacy</p>
+                </div>
+                
+                <div class="approach-card">
+                    <img src="assets\images\about4.png" alt="Sustainability" class="approach-img">
+                    <h3>Sustainable Practices</h3>
+                    <p>We source ingredients responsibly and maintain eco-friendly production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Strength Section -->
+    <section class="our-strength">
+        <div class="container">
+            <h2>Our Strength</h2>
+            <div class="strength-content">
+                <p class="strength-intro">At the heart of Raanvi is our growing community of wellness ambassadors who bring our products and philosophy to customers across India. We've created a supportive ecosystem where:</p>
+                
+                <ul class="strength-list">
+                    <li>500+ trained wellness consultants provide personalized recommendations</li>
+                    <li>30+ Ayurvedic doctors and nutritionists guide product development</li>
+                    <li>15,000+ satisfied customers trust our products daily</li>
+                    <li>40% of our network comprises women entrepreneurs</li>
+                </ul>
+                
+                <p class="strength-outro">Our team of 200+ employees works tirelessly to support this network with training, marketing materials and business tools to help them succeed.</p>
+            </div>
+        </div>
+    </section>
+
+</section>
+    <!-- Product Categories Section -->
+    <section class="product-categories">
+        <div class="container">
+            <h2 class="categories-title">Discover Our Products</h2>
+            <div class="categories-grid">
+                <a href="products index.html" class="category-card">
+                    <div class="category-image">
+                        <img src="assets\images\img6.jpg" alt="Nutraceutical">
+                    </div>
+                    <div class="category-name">PILES CARE CAPSULE</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="assets\images\img2.jpg" alt="Pain Guard Capsule">
+                    </div>
+                    <div class="category-name">SKIN CARE CAPSULE</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="assets\images\img5.jpg" alt="Slim Care Capsule">
+                    </div>
+                    <div class="category-name">DIABETIC CARE  CAPSULE</div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="assets\images\img7.jpg" alt="Diabetic Care Capsule">
+                    </div>
+                    <div class="category-name">PAIN GUARD CAPSULE</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="featured-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Featured Products</h2>
+                <p>High-quality products for your health and wellness</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img1.jpg" alt="Raanvi Care Nutraceutical">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Care Nutraceutical</h3>
+                        <p class="product-description">Premium quality supplements for your health needs</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">120 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹2499</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">100</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-care'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img2.jpg" alt="Raanvi Slim Care Capsule">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Slim Care Capsule</h3>
+                        <p class="product-description">Reduce obesity and body fat naturally with Garcinia Cambogia, Green Tea and Gymnema Sylvestre</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">60 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹999</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">20</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-slim'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img7.jpg" alt="Raanvi Pain Guard Capsule">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Pain Guard Capsule</h3>
+                        <p class="product-description">Increase bone & joint health with Mussels Hairfoot, Ashwagandha and more</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">60 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹999</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">20</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-pain'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img4.jpg" alt="Raanvi Shakthi Care Capsule">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Shakthi Care Capsule</h3>
+                        <p class="product-description">Boost energy and vitality with natural ingredients</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">60 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹1199</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">25</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-shakthi'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img5.jpg" alt="Raanvi Diabetic Care Capsule">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Diabetic Care Capsule</h3>
+                        <p class="product-description">Maintain healthy blood sugar levels naturally</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">60 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹999</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">20</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-diabetic'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets\images\img6.jpg" alt="Raanvi Piles Care Capsule">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Raanvi Piles Care Capsule</h3>
+                        <p class="product-description">Natural relief from piles and digestive discomfort</p>
+                        <div class="product-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Quantity:</span>
+                                <span class="detail-value">60 Capsules</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">MRP:</span>
+                                <span class="detail-value">₹999</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">RV Points:</span>
+                                <span class="detail-value">20</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-tax">(incl. all taxes)</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="buy-now" onclick="window.open('https://wa.me/919792734517?text=I%20want%20to%20buy%20Raanvi%20Slim%20Care%20Capsule%20(60%20Capsules)', '_blank')">Buy Now</button>
+                            <button class="referral-id" onclick="window.location.href='/login?ref=raanvi-piles'">Referral ID</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [Rest of the HTML remains exactly the same] -->
+
+   <!-- Raanvi Business Opportunity Section -->
+<section id="business-section" class="business-opportunity">
+<section class="business-opportunity">
+    <div class="container">
+        <!-- Entrepreneur Spirit Section -->
+        <div class="opportunity-intro">
+            <h2>Build Your Wellness Empire with Raanvi</h2>
+            <p>Anyone with an entrepreneurial spirit and passion for health can find success with Raanvi. We empower individuals who share our vision of holistic wellness to build thriving businesses while making a positive impact.</p>
+            
+            <p>Across India, Raanvi Wellness Ambassadors are connecting with communities both online and in-person, united by shared passions for Ayurveda, nutrition, fitness, and natural living. We provide cutting-edge digital tools and marketing support to help you amplify your business.</p>
+        </div>
+        
+        <!-- Income Potential Section -->
+        <div class="income-potential">
+            <div class="potential-content">
+                <h3>FIND MORE THAN EXTRA INCOME. START YOUR WELLNESS JOURNEY.</h3>
+                <p>Thousands of Indians are already forging their path to success as Raanvi Wellness Ambassadors. We offer:</p>
+                <ul>
+                    <li>The backing of India's fastest-growing Ayurvedic nutraceutical brand</li>
+                    <li>A compensation plan with multiple income streams</li>
+                    <li>Continuous training and business development resources</li>
+                    <li>A growing portfolio of scientifically-validated products</li>
+                </ul>
+            </div>
+            <div class="potential-image">
+                <img src="https://www.enterprise-ireland.com/resource/image/15130/landscape_ratio16x9/440/247/fc981e747bf7ebbe6380a1d68b812720/E2F0C2C00ED4756BEBB87A5D80C8FDD0/help-fund-growth-picture-.jpg" alt="Raanvi Business Opportunity">
+            </div>
+        </div>
+        
+        <!-- Business Model Section -->
+        <div class="business-model">
+            <h3>MORE THAN A BUSINESS. IT'S A MOVEMENT.</h3>
+            <p>The Raanvi opportunity rewards you for sharing authentic wellness solutions and building a team that does the same. Your income grows as your business expands through:</p>
+            
+            <div class="model-cards">
+                <div class="model-card">
+                   
+                    <h4>Retail Profits</h4>
+                    <p>Earn immediate income from product sales</p>
+                </div>
+                
+                <div class="model-card">
+                    
+                    <h4>Team Bonuses</h4>
+                    <p>Get rewarded as your team grows</p>
+                </div>
+                
+                <div class="model-card">
+                    
+                    <h4>Leadership Rewards</h4>
+                    <p>Monthly and annual performance bonuses</p>
+                </div>
+                
+                <div class="model-card">
+                    <h4>Special Incentives</h4>
+                    <p>Cash and non-cash performance rewards</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Support System Section -->
+        <div class="support-system">
+            <h3>GUIDED ENTREPRENEURSHIP WITH COMPLETE SUPPORT</h3>
+            <div class="support-content">
+                <div class="support-text">
+                    <p>You'll benefit from Raanvi's established systems including:</p>
+                    <ul>
+                        <li>Comprehensive onboarding and training programs</li>
+                        <li>Marketing tools and digital assets</li>
+                        <li>Personal business coaching</li>
+                        <li>Regular product education sessions</li>
+                        <li>A community of successful mentors</li>
+                    </ul>
+                    <a  class="cta-button">Begin Your Wellness Business Today</a>
+                </div>
+                <div class="support-image">
+                    <img src="https://vinxdigital.com/wp-content/uploads/2021/04/confident-smart-women-entrepreneurs-working.jpg" alt="Raanvi Support System">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Raanvi?</h2>
+                <p>Discover the features that make our platform the best choice for your e-commerce needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fast Performance</h3>
+                    <p>Lightning-fast page loads and smooth checkout process to maximize conversions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Perfect shopping experience on any device with our responsive designs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>PCI-compliant platform with multiple secure payment gateway options.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Real-time insights and reports to help you grow your business.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support team available around the clock to assist you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Easy Customization</h3>
+                    <p>Flexible platform that adapts to your unique business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Blog Section -->
+<!-- Blog Section -->
+<!-- Blog Section -->
+<section class="blog-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Health tips and product insights</h2>
+            <p>Your Trusted Source for Raanvi Care</p>
+        </div>
+        
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="assets/images/blog.jpg" alt="Raanvi Health Blog">
+            </div>
+            <div class="blog-content">
+                <h3>The Importance of Nutraceuticals in Daily Life</h3>
+                <p>Discover how incorporating our premium nutraceuticals into your daily routine can transform your health and wellness. Our carefully formulated supplements are designed to support various aspects of your wellbeing, from immunity boosting to joint health maintenance.</p>
+                <p>Learn how proper supplementation can help bridge nutritional gaps in modern diets and support your body's natural healing processes for optimal vitality and longevity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Testimonials Section -->
+<!-- Testimonials Section -->
+
+                    <!-- Testimonials Section -->
+<!-- Testimonials Carousel Section -->
+<!-- Testimonials Carousel Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What people have to say about us Say</h2>
+            <p>Real experiences from our community</p>
+        </div>
+        
+        <div class="testimonial-carousel">
+            <div class="testimonial-slides">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-image">
+                        <img src="assets/images/1.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Raanvi products changed my life! I've never felt better."</p>
+                        <p class="author">- rahul Verma,Bangalore</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/2.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Excellent quality and noticeable results within weeks."</p>
+                        <p class="author">- Raj Patel, Delhi</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/3.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"The best wellness products I've ever used."</p>
+                        <p class="author">- Ananya Gupta, Bangalore</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 (New) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/4.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Natural solutions that actually work. Highly recommended!"</p>
+                        <p class="author">- Vikram Joshi, Hyderabad</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 (New) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/5.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"My whole family uses Raanvi products daily. Love them!"</p>
+                        <p class="author">- Meena Kapoor, Chennai</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-prev">❮</button>
+            <button class="carousel-next">❯</button>
+            
+            <!-- Indicators (updated for 5 slides) -->
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Legal Documents Section -->
+<!-- Legal Documents Section -->
+<section id="legal-documents" class="legal-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Legal Documents</h2>
+            <p>Our official certifications and registrations</p>
+        </div>
+        
+        <div class="documents-grid-horizontal">
+            <!-- Document 1 -->
+            <div class="document-card-horizontal">
+                <div class="document-image-container-horizontal">
+                    <img src="assets/images/doc1.jpg" alt="Company Registration" class="legal-document-img-horizontal">
+                </div>
+                <div class="document-info-horizontal">
+                    <h3>Company Registration</h3>
+                    <p>Official business registration document</p>
+                </div>
+            </div>
+            
+            <!-- Document 2 -->
+            <div class="document-card-horizontal">
+                <div class="document-image-container-horizontal">
+                    <img src="assets/images/doc2.jpg" alt="GST Certificate" class="legal-document-img-horizontal">
+                </div>
+                <div class="document-info-horizontal">
+                    <h3>GST Certificate</h3>
+                    <p>Goods and Services Tax Registration</p>
+                </div>
+            </div>
+            
+            <!-- Document 3 -->
+            <div class="document-card-horizontal">
+                <div class="document-image-container-horizontal">
+                    <img src="assets/images/doc3.jpg" alt="PAN Certificate" class="legal-document-img-horizontal">
+                </div>
+                <div class="document-info-horizontal">
+                    <h3>PAN Certificate</h3>
+                    <p>Permanent Account Number</p>
+                </div>
+            </div>
+            
+            <!-- Document 4 -->
+            <div class="document-card-horizontal">
+                <div class="document-image-container-horizontal">
+                    <img src="assets/images/doc4.jpg" alt="Trade License" class="legal-document-img-horizontal">
+                </div>
+                <div class="document-info-horizontal">
+                    <h3>Trade License</h3>
+                    <p>Official business operation license</p>
+                </div>
+            </div>
+            
+            <!-- Document 5 -->
+            <div class="document-card-horizontal">
+                <div class="document-image-container-horizontal">
+                    <img src="assets/images/doc5.jpg" alt="Quality Certification" class="legal-document-img-horizontal">
+                </div>
+                <div class="document-info-horizontal">
+                    <h3>Quality Certification</h3>
+                    <p>Product quality assurance certificate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Help Center Section -->
+<section id="help-center" class="help-center-section">
+    <div class="container">
+        <h2 class="section-title">Help Center</h2>
+        
+        <div class="help-center-grid">
+            <!-- Contact Us Column -->
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                
+                <div class="contact-method">
+                    <h4>Customer Care Number</h4>
+                    <p>+919792734514</p>
+                    <p class="timings">Monday to Saturday | 10:00 AM to 6:30 PM</p>
+                </div>
+                
+                <div class="contact-method">
+                    <h4>Head Office Address</h4>
+                    <address>
+                        Raanvi Wellness Pvt. Ltd.<br>
+                        215,shekhpura Katriya yakubpur Akbarpur<br>
+                        Ambedkar Nagar-224122<br>
+                       
+                    </address>
+                </div>
+                
+                <div class="contact-method">
+                    <h4>General Enquiries</h4>
+                    <p>+919792734517</p>
+                </div>
+                
+                
+            </div>
+            
+            <!-- Write to Us Column -->
+            <div class="contact-form">
+                <h3>Write to Us</h3>
+                <p class="form-instruction">Please complete all the mandatory fields below</p>
+                
+                <form id="help-form">
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <div class="phone-input">
+                            <span class="prefix">+91</span>
+                            <input type="tel" id="mobile" name="mobile" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="state">State <span class="required">*</span></label>
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Haryana">Haryana</option>
+                            <!-- Add more states as needed -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Please select a category</option>
+                            <option value="Product">Product Inquiry</option>
+                            <option value="Order">Order Support</option>
+                            <option value="Business">Business Opportunity</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Comments (Optional)</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="acknowledgement" name="acknowledgement" checked>
+                        <label for="acknowledgement">I would like to receive an acknowledgement of this on email</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Last Image Section Before Footer -->
+<section class="last-image-section">
+    <div class="container">
+        <div class="full-width-image">
+            <img src="assets/images/last one.jpg" alt="Raanvi Final Showcase" class="final-image">
+        </div>
+    </div>
+</section>
+
+<!-- Your existing footer would go here -->
+    <footer class="footer">
+        <div class="footer-container">
+          
+                
+           
+            
+            <div class="footer-section">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us </a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Legal</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONNECT WITH US</h3>
+                <p>If you have any complaints or suggestions, you may write to us.</p>
+                <p>Raanvi India Enterprises Pvt. Ltd.<br>
+                    Raanvi Wellness Pvt. Ltd.<br>
+                    215,shekhpura Katriya yakubpur Akbarpur<br>
+                    Ambedkar Nagar-224122</p>
+                
+                <p>For Queries and Grievances, please</p>
+                
+                Tel:+919792734517 </p>
+            </div>
+            
+           
+        </div>
+    </footer>
+    
+
+    <script>
+      
+        // Banner Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const bannerContainer = document.getElementById('bannerContainer');
+            const bannerSlides = document.querySelectorAll('.banner-slide');
+            const dots = document.querySelectorAll('.banner-dot');
+            const prevBtn = document.getElementById('prevBanner');
+            const nextBtn = document.getElementById('nextBanner');
+            
+            let currentIndex = 0;
+            const totalSlides = bannerSlides.length;
+            
+            function updateBanner() {
+                bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next banner
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateBanner();
+            });
+            
+            // Previous banner
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateBanner();
+            });
+            
+            // Click on dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateBanner();
+                });
+            });
+            
+            // Auto-rotate banners every 5 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateBanner();
+            }, 5000);
+        });
+       // Add to cart functionality for the first product
+       document.addEventListener('DOMContentLoaded', function() {
+            const addToCartBtn = document.querySelector('.add-to-cart');
+            
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', function() {
+                    // Get current cart count
+                    const cartCountElement = document.querySelector('.cart-count');
+                    let currentCount = parseInt(cartCountElement.textContent) || 0;
+                    
+                    // Increment count
+                    currentCount += 1;
+                    cartCountElement.textContent = currentCount;
+                    
+                    // Visual feedback
+                    this.textContent = 'Added to Cart!';
+                    this.style.backgroundColor = '#4CAF50'; // Green color
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        this.textContent = 'Add to Cart';
+                        this.style.backgroundColor = '';
+                    }, 2000);
+                });
+            }
+        });
+        
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 100, // Adjust offset as needed
+                behavior: 'smooth'
+            });
+            
+            // Update URL without jumping
+            history.pushState(null, null, targetId);
+        }
+    });
+});
+// Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentIndex = 0;
+    
+    function updateCarousel() {
+        const slideWidth = document.querySelector('.testimonial-slide').clientWidth;
+        document.querySelector('.testimonial-slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    // Next slide
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+    
+    // Previous slide
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+    
+    // Click on indicator
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+    
+    // Auto-rotate (optional)
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }, 5000);
+});
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    let currentSlide = 0;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    // Next/Prev buttons
+    document.querySelector('.next-slide').addEventListener('click', nextSlide);
+    document.querySelector('.prev-slide').addEventListener('click', prevSlide);
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+    }
+    
+    // Auto slide change every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.main-nav a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Remove active class from all links
+      navLinks.forEach(lnk => lnk.classList.remove('active'));
+      
+      // Add active class to clicked link
+      this.classList.add('active');
+    });
+  });
+  
+  // Highlight current section in nav
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (pageYOffset >= (sectionTop - 100)) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+});
+// Smooth scroll to help center when clicking "Help Centre" link
+document.querySelectorAll('a[href="#help-center"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+   
+    
+</script>
+    <!-- Add this to your HTML (preferably just before closing </body>) -->
+    <div class="signin-overlay" id="signinOverlay">
+        <div class="signin-panel">
+            <button class="close-btn" id="closeSignin">&times;</button>
+            
+            <div class="signin-form rtl">
+                <h2>Sign in</h2>
+                
+                <form id="signinForm">
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <div class="phone-input">
+                            <span class="prefix">+91</span>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" dir="ltr">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" dir="ltr">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="signin-btn">Sign In</button>
+                    
+                    <div class="social-login">
+                        <p>Sign in with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google">
+                                <img src="assets/images/google-icon.png" alt="Google"> Google
+                            </button>
+                            <button type="button" class="social-btn facebook">
+                                <img src="assets/images/facebook-icon.png" alt="Facebook"> Facebook
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="register-option">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        <div class="register-types">
+                            <a href="#" class="register-type">Preferred Customer</a>
+                            <a href="#" class="register-type">Raanvi Business Owner</a>
+                        </div>
+                    </div>
+                    
+                    <div class="legal-links">
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    /* Signin Overlay Panel */
+    .signin-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+        transition: all 0.3s ease;
+    }
+    
+    .signin-overlay.active {
+        display: block;
+    }
+    
+    .signin-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 400px;
+        height: 100%;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+        overflow-y: auto;
+        padding: 30px;
+    }
+    
+    .signin-overlay.active .signin-panel {
+        right: 0;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #666;
+        z-index: 1001;
+        transition: color 0.2s;
+    }
+    
+    .close-btn:hover {
+        color: #333;
+    }
+    
+    /* Form Styles */
+    .signin-form {
+        direction: rtl;
+        text-align: right;
+        padding: 20px;
+    }
+    
+    .signin-form h2 {
+        text-align: center;
+        color: #0056b3;
+        margin-bottom: 30px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    .phone-input {
+        display: flex;
+        direction: ltr;
+    }
+    
+    .phone-input .prefix {
+        padding: 12px 10px;
+        background: #f1f5f9;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+    }
+    
+    .phone-input input {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    input[type="password"] {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 16px;
+        direction: ltr;
+    }
+    
+    .forgot-password {
+        display: block;
+        text-align: left;
+        margin-top: 8px;
+        color: #0056b3;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    .signin-btn {
+        width: 100%;
+        padding: 14px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        margin: 20px 0;
+        transition: background 0.3s;
+    }
+    
+    .signin-btn:hover {
+        background-color: #003d82;
+    }
+    
+    .social-login {
+        text-align: center;
+        margin: 25px 0;
+        border-top: 1px solid #eee;
+        padding-top: 25px;
+    }
+    
+    .social-login p {
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .social-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .social-btn {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    .social-btn:hover {
+        background: #f5f5f5;
+    }
+    
+    .register-option {
+        text-align: center;
+        margin: 25px 0;
+        border-top: 1px solid #eee;
+        padding-top: 25px;
+    }
+    
+    .register-option p {
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .register-link {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .register-types {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .register-type {
+        color: #0056b3;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 12px;
+        border: 1px solid #0056b3;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    
+    .register-type:hover {
+        background: #0056b3;
+        color: white;
+    }
+    
+    .legal-links {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 13px;
+    }
+    
+    .legal-links a {
+        color: #666;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    .legal-links a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 576px) {
+        .signin-panel {
+            width: 90%;
+            right: -90%;
+        }
+    }
+    </style>
+    
+    <script>
+    // Show signin panel
+    document.querySelectorAll('[data-signin]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('signinOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Hide signin panel
+    document.getElementById('closeSignin').addEventListener('click', function() {
+        document.getElementById('signinOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Close when clicking outside
+    document.getElementById('signinOverlay').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Form submission
+    document.getElementById('signinForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Handle sign in logic
+        alert('Sign in functionality would be implemented here');
+    });
+    </script>
+</body>
+</html>
