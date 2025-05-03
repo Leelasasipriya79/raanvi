@@ -49,51 +49,40 @@ html {
 
  /* Mobile Menu Styles */
 
- /* Mobile-specific overrides (≤768px) */
-/* Mobile-specific styles (≤768px) */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     /* 1. Header layout - logo and toggle in one row */
     .header-container {
       display: flex;
       flex-wrap: wrap;
       padding: 10px 15px;
       align-items: center;
+      justify-content: space-between; /* This helps position logo and button */
+      overflow: hidden;
     }
   
-    /* Logo takes available space */
+    /* Logo adjustments */
     .logo {
-      flex-grow: 1;
+      flex-grow: 0; /* Changed from 1 to prevent taking all space */
+      width: auto; /* Let the logo take its natural width */
+    }
+  
+    /* Logo image specific adjustments */
+    .logo img {
+      max-height: 50px;
+      width: auto;
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove any extra space below image */
     }
   
     /* Toggle button styling */
-    .mobile-menu-btn {
-      background: none;
-      border: none;
-      font-size: 24px;
-      padding: 5px 10px;
-      cursor: pointer;
-      order: 2;
-    }
-  
+   
     /* Search bar below logo/toggle */
-    .search-bar {
-      order: 3;
-      width: 100%;
-      margin-top: 10px;
-    }
+   
   
-    /* 2. Navigation links - hidden by default */
-    .nav-links {
-      display: none;
-      width: 100%;
-      order: 4;
-      flex-direction: column;
-      background: #fff;
-      padding: 15px;
-      margin-top: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
+    
   
+    /* Navigation items styling */
+   
     /* Show when active */
     .nav-links.active {
       display: flex;
@@ -103,13 +92,7 @@ html {
     .nav-actions > :not(.search-bar) {
       display: none;
     }
-  
-    /* 4. Adjust logo size */
-    .logo img {
-      max-height: 40px;
-      width: auto;
-    }
-  }
+}
    
   
     
