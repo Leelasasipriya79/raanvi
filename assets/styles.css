@@ -726,6 +726,7 @@ header {
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
     .nav-links {
         display: none;
@@ -735,16 +736,85 @@ header {
         display: block;
     }
     
+    /* Adjust header spacing */
+    .header-container {
+        padding: 0 15px;
+    }
+    
     .nav-actions {
         margin-left: 15px;
+    }
+    
+    /* Move Home button left */
+    .logo-link {
+        margin-right: auto;
+        padding-left: 10px;
+    }
+    
+    /* Ensure search bar has space */
+    .search-container {
+        margin-left: 10px;
+        max-width: 180px;
     }
     
     .banner-container {
         height: 300px;
     }
     
+    /* Footer adjustments */
     .footer-section {
         width: 48%;
+        padding-left: 15px; /* Add left padding */
+        margin-bottom: 20px;
+    }
+    
+    .footer-content {
+        padding: 0 15px; /* Add padding to prevent cropping */
+    }
+    
+    /* Address text wrapping */
+    .footer-address {
+        word-break: break-word;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjustments for smaller screens */
+   
+    
+    .footer-section {
+        width: 100%;
+        padding-left: 20px;
+    }
+    
+    .footer-address {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    /* Move logo to be more visible */
+    .logo img {
+        max-width: 120px; /* Adjust logo size if needed */
+        max-height: 100px;
+        margin-right: 10px; /* Add space between logo and nav items */
+    }
+
+    /* Adjust navigation items positioning */
+    .nav-links {
+        margin-left: -15px; /* Shift Products and Legal left */
+    }
+
+    /* Adjust search bar positioning */
+    .search-container {
+        margin-left: -10px; /* Shift search left */
+        min-width: 20px; /* Ensure search bar has minimum width */
+    }
+
+    /* Specific adjustment for Products and Legal links */
+    .nav-links li:nth-child(2), /* Products */
+    .nav-links li:nth-child(3) { /* Legal */
+        margin-left: 5px; /* Reduce spacing between these items */
     }
 }
 
@@ -765,9 +835,7 @@ header {
         margin-bottom: 5px;
     }
     
-    .search-bar input {
-        width: 150px;
-    }
+   
     
     .banner-container {
         height: 200px;
@@ -1711,7 +1779,11 @@ h2 {
     border-color: #0056b3;
     outline: none;
 }
-
+/* More specific selector */
+#help-form .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
 .phone-input {
     display: flex;
     align-items: center;
@@ -1774,3 +1846,170 @@ h2 {
 
 /* Keep all previous signin form styles from earlier implementation */
 /* Add RTL styles as shown in previous example */
+/* Mission & Vision Section */
+.mission-vision-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mv-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-icon {
+    font-size: 40px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.mv-card h3 {
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.mv-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Policies Section */
+.policies-section {
+    padding: 60px 0;
+    background-color: #f1f5f9;
+}
+
+.policy-tabs {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #64748b;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0056b3;
+}
+
+.tab-contents {
+    padding: 30px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.scrollable-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #0056b3;
+    border-radius: 10px;
+}
+
+.scrollable-content h4, 
+.scrollable-content h5 {
+    color: #1e293b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.scrollable-content ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.scrollable-content li {
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .tab-btn.active::after {
+        width: 3px;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .tab-contents {
+        padding: 20px;
+    }
+    
+    .scrollable-content {
+        max-height: 300px;
+    }
+}
