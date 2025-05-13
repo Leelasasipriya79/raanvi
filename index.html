@@ -12,120 +12,97 @@
     <div class="top-bar">
         <div class="top-bar-container">
             <ul class="left-links top-links">
-                <li><a href="#business-section">Business Centre</a></li>
+                <li><a href="#">Business Centre</a></li>
                 <li><a href="#about-section">About Us</a></li>
             </ul>
-            <ul class="right-links top-links">
+           
                 
-                <li><a href="#help-center">Help Centre <span class="dropdown-icon"></span></a></li>
-                <button data-signin>Sign In</button>
-               
+               <ul class="right-links top-links">
+              <li><a href="#help-center">Help Centre <span class="dropdown-icon"></span></a></li>
+              <li>
+  <a href="#signinOverlay" class="data-signin" data-signin>
+    <i class="fas fa-user"></i> Sign In
+  </a>
+</li>
+
             </ul>
+            
         </div>
     </div>
     
     <!-- Main Header -->
     <header>
-        <div class="header-container">
-           
-            <div class="logo">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
                 <img src="assets\images\logo.jpg" alt="Raanvi Logo" class="logo-image">
-                <!-- If you want to keep the text as fallback -->
-                
-            </div>    
-           
+            </a>
+        </div>    
+        
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#legal-documents">Legal</a></li>
+            </ul>
             
-            
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="#banner">Home</a></li>
-                    
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#legal-documents">Legal</a></li>
-                    
-                   
-                </ul>
-                
-                <div class="nav-actions">
-                    <div class="search-bar">
-                        <input type="text" id="productSearch" placeholder="Search products...">
-                        <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
-                    </div>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" id="productSearch" placeholder="Search products...">
+                    <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
                 </div>
-                
-                <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const searchInput = document.getElementById('productSearch');
-                    const searchButton = document.getElementById('searchButton');
-                    
-                    function handleSearch() {
-                        const searchTerm = searchInput.value.trim().toLowerCase();
-                        if (searchTerm) {
-                            // Scroll to products section
-                            document.getElementById('products').scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                            
-                            // Optional: Highlight matching products (keeps existing functionality)
-                            // You can add this if you want to filter products
-                        }
-                    }
-                    
-                    // Add event listeners
-                    searchButton.addEventListener('click', handleSearch);
-                    searchInput.addEventListener('keypress', function(e) {
-                        if (e.key === 'Enter') {
-                            handleSearch();
-                        }
-                    });
-                });
-                </script>
-                 <button class="mobile-menu-btn">☰</button>  
-                 <script>
-                     const toggleBtn = document.getElementById('toggleBtn');
-                     const navLinks = document.getElementById('navLinks');
-                 
-                     toggleBtn.addEventListener('click', () => {
-                       if (navLinks.style.display === 'none' || navLinks.style.display === '') {
-                         navLinks.style.display = 'block';
-                       } else {
-                         navLinks.style.display = 'none';
-                       }
-                     });
-                   </script>
-               
-           
-            </nav>
-        </div>
-    </header>
-
-    <!-- Banner Carousel -->
-    <section class="banner-carousel">
-        <div class="banner-container" id="bannerContainer">
-            <div class="banner-slide">
-                <img src="assets\images\banner.jpg" alt="Raanvi Premium Collection">
-            </div>
-            <div class="banner-slide">
-                <img src="assets\images\banner2.jpg" alt="raanvi-care">
-            </div>
-            <div class="banner-slide">
-                <img src="assets\images\banner3.jpg" alt="raanvi-shakthi">
             </div>
             
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchInput = document.getElementById('productSearch');
+                const searchButton = document.getElementById('searchButton');
+                
+                function handleSearch() {
+                    const searchTerm = searchInput.value.trim().toLowerCase();
+                    if (searchTerm) {
+                        document.getElementById('products').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                
+                searchButton.addEventListener('click', handleSearch);
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        handleSearch();
+                    }
+                });
+            });
+            </script>
+        </nav>
+    </div>
+</header>
+
+<section class="banner-carousel" id="banner">
+    <div class="banner-container" id="bannerContainer">
+        <div class="banner-slide">
+            <img src="assets\images\banner.jpg" alt="Raanvi Premium Collection">
         </div>
-        
-        <div class="banner-nav">
-            <button id="prevBanner"><i class="fas fa-chevron-left"></i></button>
-            <button id="nextBanner"><i class="fas fa-chevron-right"></i></button>
+        <div class="banner-slide">
+            <img src="assets\images\banner2.jpg" alt="raanvi-care">
         </div>
-        
-        <div class="banner-dots" id="bannerDots">
-            <div class="banner-dot active"></div>
-            <div class="banner-dot"></div>
-            <div class="banner-dot"></div>
-           
+        <div class="banner-slide">
+            <img src="assets\images\banner3.jpg" alt="raanvi-shakthi">
         </div>
-    </section>
+    </div>
+    
+    <div class="banner-nav">
+        <button id="prevBanner"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextBanner"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    
+    <div class="banner-dots" id="bannerDots">
+        <div class="banner-dot active"></div>
+        <div class="banner-dot"></div>
+        <div class="banner-dot"></div>
+    </div>
+</section>
     <!-- About Us Section -->
 <!-- Top Banner -->
 
@@ -166,7 +143,86 @@
             </div>
         </div>
     </section>
-    
+    <section class="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What people have to say about us Say</h2>
+            <p>Real experiences from our community</p>
+        </div>
+        
+        <div class="testimonial-carousel">
+            <div class="testimonial-slides">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-image">
+                        <img src="assets/images/1.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Raanvi products changed my life! I've never felt better."</p>
+                        <p class="author">- Rahul Verma,Bangalore</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/2.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Excellent quality and noticeable results within weeks."</p>
+                        <p class="author">- Raj Patel, Delhi</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/3.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"The best wellness products I've ever used."</p>
+                        <p class="author">- Ananya Gupta, Bangalore</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 (New) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/4.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"Natural solutions that actually work. Highly recommended!"</p>
+                        <p class="author">- Vikram Joshi, Hyderabad</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 (New) -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="assets/images/5.jpg" alt="Customer testimonial">
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="quote">"My whole family uses Raanvi products daily. Love them!"</p>
+                        <p class="author">- Meena Kapoor, Chennai</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-prev">❮</button>
+            <button class="carousel-next">❯</button>
+            
+            <!-- Indicators (updated for 5 slides) -->
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Our Story Section -->
     <section class="our-story">
         <div class="container">
@@ -175,7 +231,7 @@
                 <div class="story-text">
                     <p>Raanvi was founded by a team of Ayurvedic practitioners and nutrition scientists who recognized the need for authentic, research-backed herbal formulations in the modern wellness market. What began as a small initiative to make traditional remedies more accessible has grown into a respected nutraceutical brand.</p>
                     
-                    <p>Headquartered in [Your City], India, Raanvi operates with a pan-India presence through our network of wellness consultants. Our state-of-the-art manufacturing facility in [Location] is GMP-certified and follows stringent quality control measures at every production stage.</p>
+                    <p>Headquartered in Akbarpur, India, Raanvi operates with a pan-India presence through our network of wellness consultants. Our state-of-the-art manufacturing facility in Akbarpur is GMP-certified and follows stringent quality control measures at every production stage.</p>
                     
                     <p>In just a few years, Raanvi has developed over 50 specialized formulations in our product portfolio, with several patented Ayurvedic compounds. We source ingredients directly from certified organic farms across India to ensure purity and potency.</p>
                 </div>
@@ -239,9 +295,9 @@
         <div class="container">
             <h2 class="categories-title">Discover Our Products</h2>
             <div class="categories-grid">
-                <a href="products index.html" class="category-card">
+                <a href="#" class="category-card">
                     <div class="category-image">
-                        <img src="assets\images\img6.jpg" alt="Nutraceutical">
+                        <img src="assets\images\img6.jpg" alt="piles care capsule">
                     </div>
                     <div class="category-name">PILES CARE CAPSULE</div>
                 </a>
@@ -262,7 +318,7 @@
                 
                 <a href="#" class="category-card">
                     <div class="category-image">
-                        <img src="assets\images\img7.jpg" alt="Diabetic Care Capsule">
+                        <img src="assets\images\img7.jpg" alt="pain guard capsule">
                     </div>
                     <div class="category-name">PAIN GUARD CAPSULE</div>
                 </a>
@@ -637,86 +693,7 @@
                     <!-- Testimonials Section -->
 <!-- Testimonials Carousel Section -->
 <!-- Testimonials Carousel Section -->
-<section class="testimonials">
-    <div class="container">
-        <div class="section-title">
-            <h2>What people have to say about us Say</h2>
-            <p>Real experiences from our community</p>
-        </div>
-        
-        <div class="testimonial-carousel">
-            <div class="testimonial-slides">
-                <!-- Slide 1 -->
-                <div class="testimonial-slide active">
-                    <div class="testimonial-image">
-                        <img src="assets/images/1.jpg" alt="Customer testimonial">
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"Raanvi products changed my life! I've never felt better."</p>
-                        <p class="author">- rahul Verma,Bangalore</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 2 -->
-                <div class="testimonial-slide">
-                    <div class="testimonial-image">
-                        <img src="assets/images/2.jpg" alt="Customer testimonial">
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"Excellent quality and noticeable results within weeks."</p>
-                        <p class="author">- Raj Patel, Delhi</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 3 -->
-                <div class="testimonial-slide">
-                    <div class="testimonial-image">
-                        <img src="assets/images/3.jpg" alt="Customer testimonial">
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"The best wellness products I've ever used."</p>
-                        <p class="author">- Ananya Gupta, Bangalore</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 4 (New) -->
-                <div class="testimonial-slide">
-                    <div class="testimonial-image">
-                        <img src="assets/images/4.jpg" alt="Customer testimonial">
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"Natural solutions that actually work. Highly recommended!"</p>
-                        <p class="author">- Vikram Joshi, Hyderabad</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 5 (New) -->
-                <div class="testimonial-slide">
-                    <div class="testimonial-image">
-                        <img src="assets/images/5.jpg" alt="Customer testimonial">
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="quote">"My whole family uses Raanvi products daily. Love them!"</p>
-                        <p class="author">- Meena Kapoor, Chennai</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation Arrows -->
-            <button class="carousel-prev">❮</button>
-            <button class="carousel-next">❯</button>
-            
-            <!-- Indicators (updated for 5 slides) -->
-            <div class="carousel-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!-- Legal Documents Section -->
 <!-- Legal Documents Section -->
 <section id="legal-documents" class="legal-section">
@@ -798,6 +775,7 @@
                     <h4>Customer Care Number</h4>
                     <p>+919792734514</p>
                     <p class="timings">Monday to Saturday | 10:00 AM to 6:30 PM</p>
+                    <p>Email: <a href="mailto:info@raanvi.in">info@raanvi.in</a></p>
                 </div>
                 
                 <div class="contact-method">
@@ -833,12 +811,7 @@
                     <p><a href="https://www.raanvi.com" target="_blank">www.raanvi.com</a></p>
                 </div>
                 
-                <div class="contact-method">
-                    <h4>Customer Care</h4>
-                    <p>Phone: <a href="tel:+919792734517">+91 9792734517</a></p>
-                    <p>Email: <a href="mailto:info@raanvi.in">info@raanvi.in</a></p>
-                    <p class="timings">Monday to Saturday | 10:00 AM to 6:30 PM</p>
-                </div>
+                
                 
                 <div class="contact-method">
                     <h4>For Business Inquiries</h4>
@@ -1092,41 +1065,105 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-<!-- Your existing footer would go here -->
+
+    
+   
+  
+
     <footer class="footer">
         <div class="footer-container">
-          
-                
-           
-            
+            <div class="footer-section logo-section">
+                <img src="assets\images\raanvi png[1].png" alt="Raanvi Logo">
+            </div>
+
+            <div class="footer-section">
+                <h3>POLICIES</h3>
+                <ul>
+                    <li><a href="#policies-section" data-tab="return-policy">Return Policy</a></li>
+                    <li><a href="#policies-section" data-tab="disclaimer">Disclaimer</a></li>
+                    <li><a href="#policies-section" data-tab="privacy">Privacy Policy</a></li>
+                    <li><a href="#policies-section" data-tab="shipping">Shipping Policy</a></li>
+                    <li><a href="#policies-section" data-tab="terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
             <div class="footer-section">
                 <h3>USEFUL LINKS</h3>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us </a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">Legal</a></li>
-                    
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help Center</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>CONNECT WITH US</h3>
-                <p>If you have any complaints or suggestions, you may write to us.</p>
-                <p>Raanvi India Enterprises Pvt. Ltd.<br>
-                    Raanvi Wellness Pvt. Ltd.<br>
-                    215,shekhpura Katriya yakubpur Akbarpur<br>
-                    Ambedkar Nagar-224122</p>
-                
-                <p>For Queries and Grievances, please</p>
-                
-                Tel:+919792734517 </p>
+
+            <div class="footer-section contact-info">
+                <div class="contact-details">
+                    <p>If you have any complaints or suggestions, you may write to us.</p>
+                    <p>Raanvi India Enterprises Pvt. Ltd.<br>
+                        Raanvi Wellness Pvt. Ltd.<br>
+                        215, Shekhpura Katriya Yakubpur Akbarpur<br>
+                        Ambedkar Nagar-224122</p>
+                    <p>For Queries and Grievances, please</p>
+                    <p>Tel: +919792734517</p>
+                </div>
             </div>
-            
-           
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025  RAANVI-DESIGNED BY BLOOM IT SOLUTIONS. </p>
+            <div class="connect-with-us">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a> <!-- Facebook -->
+                    <a href="#"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a> <!-- LinkedIn -->
+                    <a href="#"><i class="fab fa-twitter"></i></a> <!-- Twitter -->
+                    <a href="#"><i class="fab fa-youtube"></i></a> <!-- YouTube -->
+                </div>
+            </div>
         </div>
     </footer>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const policyLinks = document.querySelectorAll('.footer-section ul li a[data-tab]');
     
+    policyLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const tabId = link.getAttribute('data-tab');
+            const policiesSection = document.getElementById('policies-section');
+            
+            if (policiesSection) {
+                policiesSection.scrollIntoView({ behavior: 'smooth' });
+                
+                const tabButton = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+                const tabContent = document.getElementById(tabId);
+                
+                if (tabButton && tabContent) {
+                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    
+                    tabButton.classList.add('active');
+                    tabContent.classList.add('active');
+                } else {
+                    console.error(`Tab button or content not found for tabId: ${tabId}`);
+                }
+            } else {
+                console.error('Policies section not found. Ensure the section has id="policies-section".');
+            }
+        });
+    });
+});
+</script>
+
+
+
 
     <script>
       
@@ -1358,322 +1395,814 @@ document.querySelectorAll('a[href="#help-center"]').forEach(link => {
    
     
 </script>
-    <!-- Add this to your HTML (preferably just before closing </body>) -->
+
+
+ 
+
+
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Signin Overlay */
+        .signin-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .signin-overlay.active {
+            display: block;
+        }
+
+        /* Signin Panel */
+        .signin-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 400px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+            overflow-y: auto;
+            padding: 30px;
+            direction: rtl;
+            text-align: right;
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #ccc transparent; /* For Firefox */
+        }
+
+        /* Webkit scrollbar styling (Chrome, Edge, Safari) */
+        .signin-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .signin-panel::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .signin-panel::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        /* In RTL, move the scrollbar to the right (visual left side) */
+        .signin-panel {
+            direction: rtl;
+            /* Force scrollbar to the right in RTL */
+            -webkit-transform: scaleX(-1); /* Mirror the panel to move scrollbar */
+            transform: scaleX(-1);
+        }
+
+        .signin-panel > * {
+            -webkit-transform: scaleX(-1); /* Un-mirror the content inside */
+            transform: scaleX(-1);
+        }
+
+        .signin-overlay.active .signin-panel {
+            right: 0;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            z-index: 1001;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        /* Ensure close button is on the left in Forgot Password form */
+        .forgot-password-form .close-btn {
+            right: 20px !important;
+            left: auto !important;
+            display: block !important;
+            visibility: visible !important;
+            z-index: 1002 !important;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #333;
+        }
+
+        /* Ensure back button is on the left in Forgot Password form */
+        .forgot-password-form .back-btn {
+            right: 20px !important;
+            left: auto !important;
+            display: block !important;
+            visibility: visible !important;
+            z-index: 1002 !important;
+        }
+
+        /* Common Form Styles */
+        .welcome-form, .business-owner-welcome-form, .signin-form, .forgot-password-form, .registration-form {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            direction: rtl;
+            padding: 30px 20px;
+        }
+
+        .welcome-form h1, .business-owner-welcome-form h1, .signin-form h2, .forgot-password-form h2, .registration-form h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .welcome-form p, .business-owner-welcome-form p, .signin-form p, .forgot-password-form p, .registration-form p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: left; /* Default alignment for most labels */
+        }
+
+        /* Specific labels to align left in RTL (visual right side) */
+        .form-group label[for="mobile"],
+        .form-group label[for="password"],
+        .form-group label[for="resetMobile"],
+        .registration-form .form-group label:nth-child(4), /* Mobile Number in Registration form */
+        .registration-form .form-group label:nth-child(5) /* Create Password in Registration form */
+        {
+            text-align: left; /* Align to left in RTL (visual right side) */
+        }
+
+        /* Align Registered mobile number label to the right in RTL (visual left side) */
+        .form-group label.registered-mobile {
+            text-align: left !important; /* Ensure this takes precedence */
+        }
+
+        .phone-input {
+            display: flex;
+            direction: ltr;
+        }
+
+        .phone-input .prefix {
+            padding: 10px 10px; /* Reduced padding to match height */
+            background: #f1f5f9;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+            color: #333;
+            height: 40px; /* Match the height of the input */
+            line-height: 20px; /* Center the text vertically */
+        }
+
+        .phone-input input {
+            padding: 10px 15px; /* Reduced padding to match height */
+            border: 1px solid #ddd;
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+            width: 100%;
+            font-size: 14px;
+            color: #333;
+            height: 40px; /* Match the height of the password input */
+        }
+
+        input[type="password"],
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px 15px; /* Reduced padding for consistency */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 14px;
+            color: #333;
+            height: 40px; /* Consistent height for all inputs */
+        }
+
+        input[type="password"],
+        input[type="tel"] {
+            direction: ltr;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            direction: rtl;
+            text-align: left;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: left; /* Align radio group label to the right in RTL context */
+        }
+
+        .radio-options {
+            display: flex;
+            gap: 15px;
+            direction: ltr;
+        }
+
+        .radio-options input[type="radio"] {
+            margin-left: 5px;
+        }
+
+        .radio-options label {
+            font-size: 14px;
+            color: #333;
+            font-weight: normal;
+        }
+
+        /* Conditional Fields */
+        .rbo-field, .pincode-field {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            display: block;
+            text-align: left;  
+            margin-top: 8px;
+            color: #0056b3;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .forgot-password:hover {
+            color: #003d82;
+        }
+
+        /* Buttons */
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+
+        .signin-btn:hover {
+            background-color: #003d82;
+        }
+
+        /* Social Login */
+        .social-login {
+            text-align: center;
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+        }
+
+        .social-login p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .social-btn {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .social-btn i {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .social-btn:hover {
+            background: #f5f5f5;
+        }
+
+        /* Registration Options */
+        .register-option {
+            text-align: center;
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+        }
+
+        .register-types {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .register-type-heading {
+            font-size: 16px;
+            color: #0056b3;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 25px;
+            background: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #f5f5f5;
+        }
+
+        /* Legal Links */
+        .legal-links {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+        .legal-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+
+        .legal-links a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Welcome Form Specific Styles */
+        .welcome-form, .business-owner-welcome-form {
+            text-align: center;
+            display: none;
+        }
+
+        .welcome-form .or-divider, .business-owner-welcome-form .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .welcome-form .or-divider hr, .business-owner-welcome-form .or-divider hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .welcome-form .or-divider span, .business-owner-welcome-form .or-divider span {
+            margin: 0 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Forgot Password Form */
+        .forgot-password-form {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 30px 20px;
+        }
+
+        .forgot-password-form .info-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Style for the "Has your phone number changed?" heading */
+        .forgot-password-form .info-heading {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Registration Form */
+        .registration-form {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 30px 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .signin-form, .forgot-password-form, .welcome-form, .business-owner-welcome-form, .registration-form {
+                padding: 20px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .signin-panel {
+                width: 90%;
+                right: -90%;
+            }
+        }
+    </style>
+
+    <!-- Signin Overlay -->
     <div class="signin-overlay" id="signinOverlay">
         <div class="signin-panel">
-            <button class="close-btn" id="closeSignin">&times;</button>
-            
-            <div class="signin-form rtl">
+            <button class="close-btn" id="closeSignin">×</button>
+
+            <!-- Sign-in Form -->
+            <div class="signin-form rtl" id="signinForm">
                 <h2>Sign in</h2>
-                
-                <form id="signinForm">
+                <form>
                     <div class="form-group">
                         <label for="mobile">Mobile Number</label>
                         <div class="phone-input">
                             <span class="prefix">+91</span>
-                            <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" dir="ltr">
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number">
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password" dir="ltr">
-                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <a href="#" class="forgot-password">Forgot Password</a>
                     </div>
-                    
+
                     <button type="submit" class="signin-btn">Sign In</button>
-                    
+
                     <div class="social-login">
                         <p>Sign in with</p>
                         <div class="social-buttons">
-                            <button type="button" class="social-btn google">
-                                <img src="assets/images/google-icon.png" alt="Google"> Google
+                            <button type="button" class="social-btn google" onclick="handleGoogleSignIn()">
+                                <i class="fab fa-google"></i>
                             </button>
-                            <button type="button" class="social-btn facebook">
-                                <img src="assets/images/facebook-icon.png" alt="Facebook"> Facebook
+                            <button type="button" class="social-btn facebook" onclick="handleFacebookSignIn()">
+                                <i class="fab fa-facebook-f"></i>
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="register-option">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        <h3 class="register-type-heading">Register</h3>
                         <div class="register-types">
-                            <a href="#" class="register-type">Preferred Customer</a>
-                            <a href="#" class="register-type">Raanvi Business Owner</a>
+                            <button type="button" class="register-btn" data-form="preferred">Preferred Customer</button>
+                            <button type="button" class="register-btn" data-form="business">Raanvi Business Owner</button>
                         </div>
                     </div>
-                    
-                    <div class="legal-links">
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Privacy</a>
+
+                   
+                </form>
+            </div>
+
+            <!-- Forgot Password Form -->
+            <div class="forgot-password-form rtl" id="forgotPasswordForm">
+                <button class="back-btn" id="backToSignin"> ← </button>
+                <h2>Forgot Password</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="registered-mobile">Registered Mobile Number</label>
+                        <div class="phone-input">
+                            <span class="prefix">+91</span>
+                            <input type="tel" id="resetMobile" name="mobile" placeholder="Enter registered mobile number">
+                        </div>
                     </div>
+
+                    <button type="submit" class="signin-btn">SUBMIT</button>
+
+                    <div class="info-text">
+                        <div class="info-heading">Has your phone number changed</div>
+                        <p>If you no longer use the mobile number associated with your account, 
+                           you may reach out to Customer Service to restore your access</p>
+                    </div>
+
+                   
+                </form>
+            </div>
+
+            <!-- Welcome Form for Preferred Customer -->
+            <div class="welcome-form rtl" id="welcomeForm">
+                <button class="back-btn" id="backToSigninFromWelcome">←</button>
+                <h1>Welcome</h1>
+                <p>Let's start your journey with  Raanvi by getting you onboard</p>
+                <p>You must be at least 18 years old and an Indian citizen to register with Raanvi India</p>
+                <button class="register-btn" id="registerButton">REGISTER</button>
+                <div class="or-divider">
+                    <hr><span>or</span><hr>
+                </div>
+                <div class="social-login">
+                    <p>Sign up with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google" onclick="handleGoogleSignIn()">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn facebook" onclick="handleFacebookSignIn()">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Form for Raanvi Business Owner -->
+            <div class="business-owner-welcome-form rtl" id="businessOwnerForm">
+                <button class="back-btn" id="backToSigninFromBusinessOwner">←</button>
+                <h1>Welcome</h1>
+                <p>Let's start your journey with Raanvi as a Raanvi Business Owner</p>
+                <p>You must be at least 18 years old and an Indian citizen to register with Raanvi India</p>
+                <button class="register-btn" id="businessOwnerRegisterButton">REGISTER</button>
+                <div class="or-divider">
+                    <hr><span>or</span><hr>
+                </div>
+                <div class="social-login">
+                    <p>Sign up with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google" onclick="handleGoogleSignIn()">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn facebook" onclick="handleFacebookSignIn()">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Registration Form -->
+            <div class="registration-form rtl" id="registrationForm">
+                <button class="back-btn" id="backToPreviousForm">←</button>
+                <h2>Let’s get you started</h2>
+                <p style="text-align: center; font-size: 15px;">Please complete all the mandatory steps below to finish your registration</p>
+                <form>
+                    <div class="form-group">
+                        <label>First and Middle Name</label>
+                        <input type="text" placeholder="Enter your first& middle name" dir="ltr0">
+                         <p style="font-size: 12px; color: #666;text-align: left;">Please Enter the name as mentioned in  your ID proof</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name (Optional)</label>
+                        <input type="text" placeholder="Enter your last name" dir="rtl">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="example@mail.com" dir="rtl" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <div class="phone-input">
+                            <span class="prefix">+91</span>
+                            <input type="tel" placeholder="Enter mobile number" dir="ltr" required>
+                        </div>
+                        <p style="font-size: 12px; color: #666; text-align: left;">Mobile Number will be used as your login ID </p>
+                    </div>
+                    <div class="form-group">
+                        <label>Create Password</label>
+                        <input type="password" placeholder="Example - My@password1" dir="ltr" required>
+                    </div>
+                    <div class="radio-group">
+                        <label>Do you know an Raanvi Business Owner (RBO)</label>
+                        <div class="radio-options">
+                            <div>
+                                <input type="radio" id="aboYes" name="abo" value="yes" required>
+                                <label for="rboYes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="aboNo" name="abo" value="no">
+                                <label for="rboNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group rbo-field" id="aboField">
+                        <label>Please enter RBO No</label>
+                        <input type="text" placeholder="Eg. 123456" dir="ltr">
+                    </div>
+                    <div class="form-group pincode-field" id="pincodeField">
+                        <label>Please enter Pincode</label>
+                        <input type="text" placeholder="Enter your pincode" dir="ltr">
+                    </div>
+                    <button type="submit" class="signin-btn">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-    
-    <style>
-    /* Signin Overlay Panel */
-    .signin-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        display: none;
-        transition: all 0.3s ease;
-    }
-    
-    .signin-overlay.active {
-        display: block;
-    }
-    
-    .signin-panel {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 400px;
-        height: 100%;
-        background: white;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        transition: right 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-        overflow-y: auto;
-        padding: 30px;
-    }
-    
-    .signin-overlay.active .signin-panel {
-        right: 0;
-    }
-    
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background: none;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
-        color: #666;
-        z-index: 1001;
-        transition: color 0.2s;
-    }
-    
-    .close-btn:hover {
-        color: #333;
-    }
-    
-    /* Form Styles */
-    .signin-form {
-        direction: rtl;
-        text-align: right;
-        padding: 20px;
-    }
-    
-    .signin-form h2 {
-        text-align: center;
-        color: #0056b3;
-        margin-bottom: 30px;
-    }
-    
-    .form-group {
-        margin-bottom: 20px;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        color: #333;
-        font-weight: 500;
-    }
-    
-    .phone-input {
-        display: flex;
-        direction: ltr;
-    }
-    
-    .phone-input .prefix {
-        padding: 12px 10px;
-        background: #f1f5f9;
-        border: 1px solid #ddd;
-        border-radius: 4px 0 0 4px;
-    }
-    
-    .phone-input input {
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-        border-left: none;
-        border-radius: 0 4px 4px 0;
-        width: 100%;
-        font-size: 16px;
-    }
-    
-    input[type="password"] {
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        width: 100%;
-        font-size: 16px;
-        direction: ltr;
-    }
-    
-    .forgot-password {
-        display: block;
-        text-align: left;
-        margin-top: 8px;
-        color: #0056b3;
-        font-size: 14px;
-        text-decoration: none;
-    }
-    
-    .signin-btn {
-        width: 100%;
-        padding: 14px;
-        background-color: #0056b3;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        margin: 20px 0;
-        transition: background 0.3s;
-    }
-    
-    .signin-btn:hover {
-        background-color: #003d82;
-    }
-    
-    .social-login {
-        text-align: center;
-        margin: 25px 0;
-        border-top: 1px solid #eee;
-        padding-top: 25px;
-    }
-    
-    .social-login p {
-        color: #666;
-        margin-bottom: 15px;
-    }
-    
-    .social-buttons {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-    }
-    
-    .social-btn {
-        padding: 10px 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background: white;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-    
-    .social-btn:hover {
-        background: #f5f5f5;
-    }
-    
-    .register-option {
-        text-align: center;
-        margin: 25px 0;
-        border-top: 1px solid #eee;
-        padding-top: 25px;
-    }
-    
-    .register-option p {
-        color: #666;
-        margin-bottom: 15px;
-    }
-    
-    .register-link {
-        color: #0056b3;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    
-    .register-types {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    
-    .register-type {
-        color: #0056b3;
-        text-decoration: none;
-        font-size: 14px;
-        padding: 8px 12px;
-        border: 1px solid #0056b3;
-        border-radius: 4px;
-        transition: all 0.3s;
-    }
-    
-    .register-type:hover {
-        background: #0056b3;
-        color: white;
-    }
-    
-    .legal-links {
-        text-align: center;
-        margin-top: 25px;
-        font-size: 13px;
-    }
-    
-    .legal-links a {
-        color: #666;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-    
-    .legal-links a:hover {
-        color: #0056b3;
-        text-decoration: underline;
-    }
-    
-    @media (max-width: 576px) {
-        .signin-panel {
-            width: 90%;
-            right: -90%;
-        }
-    }
-    </style>
-    
+
     <script>
-    // Show signin panel
-    document.querySelectorAll('[data-signin]').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+    document.addEventListener('DOMContentLoaded', function() {
+        let previousForm = null; // To track the previous form for the back button
+
+        // Toggle Signin Overlay (for manual testing, you can trigger this via console)
+        document.querySelectorAll('[data-signin]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('signinOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close Overlay
+        document.getElementById('closeSignin').addEventListener('click', () => {
+            document.getElementById('signinOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Forgot Password Toggle
+        document.querySelector('.forgot-password').addEventListener('click', (e) => {
             e.preventDefault();
-            document.getElementById('signinOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
+            document.getElementById('signinForm').style.display = 'none';
+            document.getElementById('forgotPasswordForm').style.display = 'block';
+        });
+
+        // Back to Signin from Forgot Password
+        document.getElementById('backToSignin').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('forgotPasswordForm').style.display = 'none';
+            document.getElementById('signinForm').style.display = 'block';
+        });
+
+        // Preferred Customer (Welcome Form) Toggle
+        document.querySelectorAll('.register-btn[data-form="preferred"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('signinForm').style.display = 'none';
+                document.getElementById('welcomeForm').style.display = 'block';
+            });
+        });
+
+        // Back to Signin from Welcome Form (Preferred Customer)
+        document.getElementById('backToSigninFromWelcome').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('welcomeForm').style.display = 'none';
+            document.getElementById('signinForm').style.display = 'block';
+        });
+
+        // Raanvi Business Owner (Welcome Form) Toggle
+        document.querySelectorAll('.register-btn[data-form="business"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('signinForm').style.display = 'none';
+                document.getElementById('businessOwnerForm').style.display = 'block';
+            });
+        });
+
+        // Back to Signin from Welcome Form (Raanvi Business Owner)
+        document.getElementById('backToSigninFromBusinessOwner').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('businessOwnerForm').style.display = 'none';
+            document.getElementById('signinForm').style.display = 'block';
+        });
+
+        // Register Button in Welcome Form (Preferred Customer) - Transition to Registration Form
+        document.getElementById('registerButton').addEventListener('click', (e) => {
+            e.preventDefault();
+            previousForm = document.getElementById('welcomeForm'); // Store the current form
+            document.getElementById('welcomeForm').style.display = 'none';
+            document.getElementById('registrationForm').style.display = 'block';
+        });
+
+        // Register Button in Welcome Form (Raanvi Business Owner) - Transition to Registration Form
+        document.getElementById('businessOwnerRegisterButton').addEventListener('click', (e) => {
+            e.preventDefault();
+            previousForm = document.getElementById('businessOwnerForm'); // Store the current form
+            document.getElementById('businessOwnerForm').style.display = 'none';
+            document.getElementById('registrationForm').style.display = 'block';
+        });
+
+        // Back to Previous Form from Registration Form
+        document.getElementById('backToPreviousForm').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('registrationForm').style.display = 'none';
+            if (previousForm) {
+                previousForm.style.display = 'block';
+            }
+        });
+
+        // Radio Button Logic for ABO Fields
+        const aboYes = document.getElementById('aboYes');
+        const aboNo = document.getElementById('aboNo');
+        const aboField = document.getElementById('aboField');
+        const pincodeField = document.getElementById('pincodeField');
+
+        aboYes.addEventListener('change', () => {
+            aboField.style.display = 'block';
+            pincodeField.style.display = 'none';
+        });
+
+        aboNo.addEventListener('change', () => {
+            aboField.style.display = 'none';
+            pincodeField.style.display = 'block';
+        });
+
+        // Form Submissions
+        document.getElementById('signinForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Sign in functionality would be implemented here');
+        });
+
+        document.getElementById('forgotPasswordForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Password reset functionality would be implemented here');
+        });
+
+        document.getElementById('registrationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Registration functionality would be implemented here');
+        });
+
+        // Debug: Check if buttons are visible in Forgot Password form
+        const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+        forgotPasswordForm.addEventListener('click', () => {
+            const closeBtn = document.querySelector('.forgot-password-form .close-btn');
+            const backBtn = document.querySelector('.forgot-password-form .back-btn');
+            console.log('Close button display:', closeBtn ? window.getComputedStyle(closeBtn).display : 'Not found');
+            console.log('Back button display:', backBtn ? window.getComputedStyle(backBtn).display : 'Not found');
         });
     });
-    
-    // Hide signin panel
-    document.getElementById('closeSignin').addEventListener('click', function() {
-        document.getElementById('signinOverlay').classList.remove('active');
-        document.body.style.overflow = '';
-    });
-    
-    // Close when clicking outside
-    document.getElementById('signinOverlay').addEventListener('click', function(e) {
-        if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Form submission
-    document.getElementById('signinForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Handle sign in logic
-        alert('Sign in functionality would be implemented here');
-    });
+
+    // Social Login Handlers
+    function handleGoogleSignIn() {
+        console.log('Google sign-in initiated');
+    }
+
+    function handleFacebookSignIn() {
+        console.log('Facebook sign-in initiated');
+    }
     </script>
+    
 </body>
 </html>
