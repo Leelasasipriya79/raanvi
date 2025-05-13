@@ -708,7 +708,7 @@ header {
         }
 
         .footer-section h3 {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: bold;
             margin-bottom: 15px;
             color: #fff; /* White text */
@@ -728,7 +728,7 @@ header {
         .footer-section ul li a {
             color: #fff; /* White text */
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
             transition: color 0.3s;
         }
 
@@ -764,7 +764,7 @@ header {
             justify-content: space-between; /* Align copyright left, social icons right */
             align-items: center;
             color: #fff;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .footer-copyright p {
@@ -778,7 +778,7 @@ header {
         }
 
         .footer-copyright .connect-with-us h3 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             color: #fff;
             margin: 0 10px 0 0;
@@ -794,7 +794,7 @@ header {
 
         .footer-copyright .connect-with-us .social-icons a {
             color: #fff;
-            font-size: 20px;
+            font-size: 21px;
             text-decoration: none;
         }
 
